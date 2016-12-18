@@ -10,9 +10,13 @@ namespace Quick_sort
     {
         static void Main(string[] args)
         {
+            // Array to be sorted.
             var a = new[] { 7, 2, 1, 6, 8, 5, 3, 4 };
-            QuickSort(a, 0, 7);
-            // print sorted array
+
+            // Pass array, start-index and the end index.
+            QuickSort(a, 0, a.Length - 1);
+
+            // Print sorted array.
             for (int i = 0; i < 8; i++)
             {
                 Console.Write(a[i]);
@@ -49,8 +53,12 @@ namespace Quick_sort
             {
                 if (a[i] < pivot)
                 {
-                    // swap if element is lesser than pivot
-                    Swap(ref a[i], ref a[partitionIndex]);
+                    // Only swap if variable *i and partitinoIndex are different.
+                    if (i != partitionIndex)
+                    {
+                        // swap if element is lesser than pivot
+                        Swap(ref a[i], ref a[partitionIndex]);
+                    }
                     partitionIndex += 1;
                 }
             }

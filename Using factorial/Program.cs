@@ -7,23 +7,29 @@ namespace Using_factorial
 {
     class Program
     {
-        static int Factorial(int n)
+        static long Factorial(int n, bool verbose)
         {
-            Console.WriteLine("I am calculating F(" + n + ")\n");
+            if (verbose)
+            {
+                Console.WriteLine("I am calculating F(" + n + ")\n");
+            }
             if (n == 0)
             {
                 return 1;
             }
-            int f = n * Factorial(n - 1);
-            Console.WriteLine("Done! F(" + n + ") = " + f + "\r\n");
+            long f = n * Factorial(n - 1, verbose);
+            if (verbose)
+            {
+                Console.WriteLine("Done! F(" + n + ") = " + f + "\r\n");
+            }
             return f;
         }
         static void Main(string[] args)
         {
             Console.WriteLine("Give me an n: ");
             int n = int.Parse(Console.ReadLine());
-            int result = Factorial(n);
-            Console.WriteLine("\r\n" + result);
+            long result = Factorial(n, false);
+            Console.WriteLine($"{n} factoral is equal to: {result}");
         }
     }
 }
