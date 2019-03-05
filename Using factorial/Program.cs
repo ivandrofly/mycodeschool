@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace Using_factorial
 {
-    class Program
+    internal class Program
     {
-        static long Factorial(int n, bool verbose)
+        private static long Factorial(int n, bool verbose)
         {
             if (verbose)
             {
@@ -24,7 +21,8 @@ namespace Using_factorial
             }
             return f;
         }
-        static void Main(string[] args)
+
+        private static void Main(string[] args)
         {
             Console.WriteLine("Give me an n: ");
             int n = int.Parse(Console.ReadLine());

@@ -1,11 +1,13 @@
 ﻿using System;
 
-class Program
+internal class Program
 {
     public static int Fibonacci(int n)
     {
         if (n <= 1)
+        {
             return n;
+        }
 
         // F is temp variable to help exchange the variable name
         int f1 = 0, f2 = 1, f = 0;
@@ -25,18 +27,18 @@ class Program
         return f;
     }
 
-    static void Main()
+    private static void Main()
     {
         // r = 8 if n = 6;
-        var total = 0;
+        int total = 0;
 
-        var y = int.Parse(Console.ReadLine());
+        int y = int.Parse(Console.ReadLine());
         Console.WriteLine("The result if: " + Fibonacci(y));
         Console.ReadLine();
 
         for (int i = 0; i < 15; i++)
         {
-            var x = Fibonacci(i);
+            int x = Fibonacci(i);
             total += x;
             Console.WriteLine(x);
         }
