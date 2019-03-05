@@ -1,29 +1,31 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace MergeSortAlgorithm
 {
-    class Program
+    internal class Program
     {
         private static void MergeSort(int[] a)
         {
             if (a.Length < 2)
+            {
                 return;
+            }
 
             // Split in middle
-            var mid = a.Length >> 1;
+            int mid = a.Length >> 1;
 
             int[] left = new int[mid];
             int[] right = new int[a.Length - mid];
 
             for (int i = 0; i < mid; i++)
+            {
                 left[i] = a[i];
+            }
 
             for (int i = mid; i < a.Length; i++)
+            {
                 right[i - mid] = a[i];
+            }
 
             MergeSort(left);
             MergeSort(right);
@@ -37,9 +39,14 @@ namespace MergeSortAlgorithm
             while (i < left.Length && j < right.Length)
             {
                 if (left[i] <= right[j])
+                {
                     a[k] = left[i++];
+                }
                 else
+                {
                     a[k] = right[j++];
+                }
+
                 k++;
             }
             while (i < left.Length)
@@ -54,7 +61,7 @@ namespace MergeSortAlgorithm
             }
         }
 
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             int[] list = { 2, 4, 1, 6, 8, 5, 3, 7 };
             Console.WriteLine("Before performing merge-sort");

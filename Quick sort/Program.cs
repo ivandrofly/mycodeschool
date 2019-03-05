@@ -1,17 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Quick_sort
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             // Array to be sorted.
-            var a = new[] { 7, 2, 1, 6, 8, 5, 3, 4 };
+            int[] a = new[] { 7, 2, 1, 6, 8, 5, 3, 4 };
 
             // Pass array, start-index and the end index.
             QuickSort(a, 0, a.Length - 1);
@@ -35,8 +31,11 @@ namespace Quick_sort
 
         private static void QuickSort(int[] a, int start, int end)
         {
+            // segment validation
             if (start >= end)
+            {
                 return;
+            }
 
             // calling partition
             int partitionIndex = Partition(a, start, end);
@@ -46,9 +45,9 @@ namespace Quick_sort
 
         private static int Partition(int[] a, int start, int end)
         {
-            var pivot = a[end];
+            int pivot = a[end];
             // set partition index as start initially
-            var partitionIndex = start;
+            int partitionIndex = start;
             for (int i = start; i < end; i++)
             {
                 if (a[i] < pivot)
@@ -69,7 +68,7 @@ namespace Quick_sort
 
         private static void Swap(ref int x, ref int y)
         {
-            var temp = x;
+            int temp = x;
             x = y;
             y = temp;
         }
