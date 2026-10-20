@@ -16,7 +16,7 @@ machine will be used.
 Build everything:
 
 ```sh
-dotnet build mycodeschool.sln
+dotnet build mycodeschool.slnx
 ```
 
 Run a single project by its folder name (quotes are needed because the names
@@ -68,6 +68,6 @@ The solution groups the projects into folders by topic.
 
 ## Layout
 
-- `mycodeschool.sln` – solution with the topic folders above
+- `mycodeschool.slnx` – solution (XML format) with the topic folders above
 - `Directory.Build.props` – shared settings (`net10.0`, implicit usings)
 - `<Project>/Program.cs` – the implementation for each topic
