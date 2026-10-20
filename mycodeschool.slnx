@@ -1,0 +1,21 @@
+<Solution>
+  <Folder Name="/Misc/">
+    <Project Path="Check for balanced parentheses/Check for balanced parentheses.csproj" />
+    <Project Path="Decimal to Binary/Decimal to Binary.csproj" />
+    <Project Path="How many time a array si rotated/How many time a array si rotated.csproj" />
+    <Project Path="Operators Evaluation/Operators Evaluation.csproj" />
+    <Project Path="Power Equation/Power Equation.csproj" />
+    <Project Path="Print 2-D Array in Spiral/Print 2-D Array in Spiral.csproj" />
+  </Folder>
+  <Folder Name="/Recursion/">
+    <Project Path="Fibonacci Implementation/Fibonacci Implementation.csproj" />
+    <Project Path="Using factorial/Using factorial.csproj" />
+  </Folder>
+  <Folder Name="/Sorting Algorithms/">
+    <Project Path="MergeSort/MergeSort.csproj" />
+    <Project Path="Quick sort/Quick sort.csproj" />
+  </Folder>
+  <Folder Name="/Time Complexity/">
+    <Project Path="Prime numbers/Prime numbers.csproj" />
+  </Folder>
+</Solution>
